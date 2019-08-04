@@ -71,14 +71,6 @@ class FFT2:
         if self.bMousePressed:
             self.update(event)
     
-    def onKeyPress(self, event):
-        if event.key == 'control':
-            self.bCtrlPressed = True
-    
-    def onKeyRelease(self, event):
-        if event.key == 'control':
-            self.bCtrlPressed = False
-    
     def update(self, event):
         if event.inaxes != self.axes4:
             return
