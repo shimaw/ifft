@@ -9,25 +9,24 @@
   - 61~64行目：マウスをクリックしたときの処理。
   - 66~68行目：クリックをやめたときの処理。
   - 70~72行目：マウスを動かしたときの処理。
-  - 74~76行目：キーボードを押下したときの処理
-  - 78~80行目：キーボードを押下を解除したときの処理
-  - 82~148行目：クリックしたところに対応するフーリエ変換のパラメータを表示、またそれを重ね合わせたものを表示する処理。
+  - 74~144行目：クリックした位置に対応するフーリエ変換のパラメータを表示しまたそれを重ね合わせたものを表示する.
   
-- 使用方法
-  - 12行目で画像のアドレスを指定する。
-  - 実行すると5つの画像が並んで表示されるため、下段の真ん中の画像をCtrlを押しながらクリックする。
-  - するとリアルタイムで逆フーリエ変換が行われる。
-  
-- 使用したバージョン
-  - Python 3.7.3
-  - import numpy
-  - import numpy.fft.fftpack as fftpack
-  - from PIL import Image
-  - import matplotlib.pyplot as plt
+- 使用方法、実行の仕方，依存ライブラリとバージョン
+  - 使用方法
+    - 6行目で画像のサイズを決められる。
+    - 12行目で画像を指定する。
+    - 実行した際に2つの画像と3つの白い枠が表示される。真ん中の白い枠内をクリックすることによってその位置を得て逆変換を行う。
+  - 実行の仕方
+    - VS codeを用いて実行した
+  - 依存ライブラリ
+    - numpy
+    - numpy.fft.fftpack as fftpack
+    - PIL import Image
+    - matplotlib.pyplot as plt
+  - バージョン
+    - Python 3.73
   
 - 参考にしたサイト
   - 「２次元フーリエ変換／逆変換の解説 Two-dimensional Fourier Transform Demo」https://www.youtube.com/watch?v=pCVdNYvORVw&feature=plcp
   - 「Windows用Portable PsychoPy / VisionEgg」 http://www.s12600.net/psy/etc/python.html
-    - フーリエ変換、逆変換のソースコードがこのサイトに載っていたので参考にした。
-    - ここにあるコードはPython3に非対応であったため、Python3に対応させた。
-    - 表示方法をYouTubeの表示のように変更した。
+    - FFT2demo.pyのコードをベースにして作成した
